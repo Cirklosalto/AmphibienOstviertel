@@ -8,9 +8,6 @@ library(png)
 library(httr)
 library(jsonlite)
 
-
-setwd("C:/Users/User/Desktop/Krötenzaun/AmphibienOstviertel2026") #set working directory
-
 rm(list = ls())
 
 url <- "https://five.epicollect.net/api/export/entries/amphibien-ostviertel-2026?format=csv"
