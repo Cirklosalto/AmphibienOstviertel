@@ -374,7 +374,7 @@ image_files <- c(
 )
 
 # Format the date as DD.MM.YYYY
-pdf(paste0("Krötenzaunauswertung_", format(Sys.Date(), "%d.%m.%Y"), ".pdf"), width = 8.27, height = 5.83)
+pdf(paste0("Auswertung_", format(Sys.Date(), "%d.%m.%Y"), ".pdf"), width = 8.27, height = 5.83)
 
 # Jede PNG auf eine neue Seite im PDF einfügen
 for (img_file in image_files) {
