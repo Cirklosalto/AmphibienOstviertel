@@ -163,7 +163,7 @@ ggplot(sum_by_erfasserin, aes(x = X1_Name_Erfasserin, y = Total_Individuals)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))  # Rotate axis labels for readability
 
 # Save the plot as a PNG file
-ggsave("Lebendfunde nach Erfasser_in.png", 
+ggsave("Lebendfunde_Erfasserin.png", 
        width = 8, height = 6, dpi = 300, bg = "white")  # You can adjust width, height, and dpi as needed
 
 
@@ -236,7 +236,7 @@ geom_bar(stat = "identity", position = "dodge") +  # Bars for both Living and To
   )
 
 # Save the plot as a PNG file
-ggsave("Funde nach Feuchtigkeit.png", 
+ggsave("Feuchtigkeit.png", 
        width = 8, height = 6, dpi = 300, bg = "white")  # You can adjust width, height, and dpi as needed
 
 #Temperatur
@@ -268,7 +268,7 @@ ggplot(temperature_plot_data, aes(x = X5_Temperatur_in_Cels, y = Anzahl, color =
   labs(title = "Einfluss der (geschätzten) Temperatur", x = "°C", y = "Anzahl", color = "Typ") +
   scale_color_manual(values = c("Weibchen" = "deeppink", "Männchen" = "blue", "Molche" = "darkgreen", "Totfunde" = "grey"))
 
-ggsave("Funde nach Temperatur.png", 
+ggsave("Temperatur.png", 
        width = 8, height = 6, dpi = 300, bg = "white")
 
 
@@ -316,7 +316,7 @@ ggplot(sum_by_tageszeit_long, aes(x = X3_Tageszeit, y = Sum, fill = Type)) +
   )
 
 # Save the plot as a PNG file
-ggsave("Funde nach Tageszeit.png", 
+ggsave("Tageszeit.png", 
        width = 8, height = 6, dpi = 300, bg = "white")  # You can adjust width, height, and dpi as needed
 
 
@@ -367,10 +367,10 @@ cat("Gesamtzahl der Totfunde:", total_dead_finds, "\n")
 image_files <- c(
   "Straßenweise.png",
   "Funddaten.png",
-  "Funde nach Temperatur.png",
-  "Funde nach Tageszeit.png",
-  "Funde nach Feuchtigkeit.png",
-  "Lebendfunde nach Erfasser_in.png"
+  "Temperatur.png",
+  "Tageszeit.png",
+  "Feuchtigkeit.png",
+  "Lebendfunde_Erfasserin.png"
 )
 
 # Format the date as DD.MM.YYYY
