@@ -39,7 +39,7 @@ jobs:
         run: |
           mkdir -p docs
           # Move the PDF and rename safely
-          mv *.pdf docs/Kroetenzaunauswertung.pdf
+          mv *.pdf docs/Auswertung.pdf
           # Ensure index.html exists
           if [ ! -f docs/index.html ]; then
             echo '<!DOCTYPE html><html><head><meta charset="utf-8"><title>Amphibien Ostviertel</title></head><body><h1>Amphibien Ostviertel Reports</h1><p><a href="Kroetenzaunauswertung.pdf" target="_blank">Open latest PDF</a></p></body></html>' > docs/index.html
